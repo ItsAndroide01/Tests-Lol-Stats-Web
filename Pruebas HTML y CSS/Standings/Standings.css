@@ -1,0 +1,435 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY / FONDO ================= */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    background:
+        radial-gradient(1200px 600px at top, #15151a, #0b0b0e);
+    min-height: 100vh;
+    padding: 32px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* ================= APP WRAPPER ================= */
+
+#app {
+    max-width: 1700px; /* SOLO más ancho, mismo centrado */
+    margin: 0 auto;
+}
+
+/* ================= MATCH CARD ================= */
+
+.match-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+
+    padding: 16px 28px;
+    margin-bottom: 12px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.015)
+        );
+
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.10);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-1px);
+    box-shadow:
+        0 28px 60px rgba(0,0,0,0.55),
+        inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+/* ================= DATE ================= */
+
+.match-date {
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 110px;
+
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 0.4px;
+
+    text-shadow: 0 0 12px rgba(255,255,255,0.18);
+}
+
+/* ================= TEAMS ================= */
+
+.match-teams {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+
+/* ================= TEAM ================= */
+
+.match-team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.match-team.winner {
+    font-weight: 600;
+}
+
+.match-team.loser {
+    opacity: 0.65;
+}
+
+.match-team:first-child {
+    justify-content: flex-start;
+}
+
+.match-team:last-child {
+    justify-content: flex-end;
+}
+
+/* ================= TEAM LOGO ================= */
+
+.match-team-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    flex-shrink: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.20),
+            rgba(255,255,255,0.05)
+        );
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.35),
+        0 6px 16px rgba(0,0,0,0.35);
+}
+
+/* ================= TEAM NAME ================= */
+
+.match-team-name {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* ================= SCORE ================= */
+
+
+.match-score {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    pointer-events: none; /* opcional */
+}
+
+
+
+/* ================= SCORE COLORS ================= */
+
+.text-blue {
+    color: #5AC8FA;
+    text-shadow: 0 0 12px rgba(90,200,250,0.45);
+}
+
+/* HTML usa text-pink → lo mapeamos a rojo */
+.text-pink,
+.text-red {
+    color: #FF6A5C;
+    text-shadow: 0 0 12px rgba(255,106,92,0.45);
+}
+
+.text-muted {
+    color: rgba(255,255,255,0.4);
+}
+
+/* ================= DURATION ================= */
+
+.match-duration {
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 80px;
+    text-align: right;
+
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 0.4px;
+
+    text-shadow: 0 0 12px rgba(255,255,255,0.18);
+}
+
+/* ================= HEADER ================= */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    padding: 18px 24px;
+    margin-bottom: 24px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.015)
+        );
+
+    backdrop-filter: blur(40px) saturate(140%);
+    -webkit-backdrop-filter: blur(40px) saturate(140%);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.10);
+}
+
+/* ================= LEFT ================= */
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* ================= BRAND ================= */
+
+.league-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* ================= NAV ================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 12px;
+    border-radius: 10px;
+
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    color: rgba(255,255,255,0.65);
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+.nav-link svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    opacity: 0.75;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.95);
+}
+
+.nav-link:hover svg {
+    opacity: 1;
+}
+
+.nav-link.active {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,215,140,0.28),
+            rgba(255,175,70,0.12)
+        );
+
+    color: #fff;
+
+    box-shadow:
+        0 6px 18px rgba(255,190,90,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.55),
+        inset 0 0 0 1px rgba(255,215,140,0.45);
+}
+
+.nav-link.active svg {
+    opacity: 1;
+}
+
+/* ================= RIGHT ================= */
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.year-selector {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+
+    padding: 6px 10px;
+    color: rgba(255,255,255,0.9);
+    font-size: 12px;
+
+    outline: none;
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    #app {
+        max-width: 100%;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+    }
+}
+.league-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,215,140,0.55),
+            rgba(255,175,70,0.25)
+        );
+
+    color: #2a1a0f;
+
+    box-shadow:
+        0 10px 26px rgba(255,190,90,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.6),
+        inset 0 0 0 1px rgba(255,215,140,0.45);
+}
+/* ================= BRAND TEXT ================= */
+
+.league-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.league-name {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: rgba(255,255,255,0.95);
+}
+
+.league-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 9px;
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,215,140,0.25),
+            rgba(255,175,70,0.12)
+        );
+
+    color: #ffd78a;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.45),
+        inset 0 0 0 1px rgba(255,215,140,0.35);
+}
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+    margin-bottom: 18px;
+}
+
+.page-title {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+
+    color: rgba(255,255,255,0.95);
+
+    text-shadow:
+        0 6px 20px rgba(0,0,0,0.45),
+        0 0 18px rgba(90,200,250,0.15);
+}
+
+.page-subtitle {
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 500;
+
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.3px;
+}
