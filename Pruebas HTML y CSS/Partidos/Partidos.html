@@ -1,0 +1,292 @@
+<link rel="stylesheet" href="Partidos.css">
+<header class="header-container">
+    <div class="header-left">
+        <div class="league-brand" data-page="overview">
+            <div class="league-logo">LEC</div>
+            <span class="league-name">LEC</span>
+            <span class="league-badge">2026</span>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <button class="nav-link" data-page="overview">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <span>Overview</span>
+            </button>
+
+            <button class="nav-link active" data-page="matches">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                </svg>
+                <span>Partidos</span>
+            </button>
+
+            <button class="nav-link" data-page="standings">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 20V10"></path>
+                    <path d="M12 20V4"></path>
+                    <path d="M6 20v-6"></path>
+                </svg>
+                <span>Standings</span>
+            </button>
+
+            <button class="nav-link" data-page="teams">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>Equipos</span>
+            </button>
+
+            <button class="nav-link" data-page="players">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>Jugadores</span>
+            </button>
+
+            <button class="nav-link" data-page="champions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span>Campeones</span>
+            </button>
+
+            <button class="nav-link" data-page="compare">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="18" cy="18" r="3"></circle>
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                    <path d="M11 18H8a2 2 0 0 1-2-2V9"></path>
+                </svg>
+                <span>Comparar</span>
+            </button>
+        </nav>
+    </div>
+
+    <div class="header-right">
+        <select class="year-selector">
+            <option>Winter 2026</option>
+        </select>
+    </div>
+</header>
+
+
+<div id="app">
+
+    <div class="page-header">
+    <h1 class="page-title">Partidos</h1>
+    <p class="page-subtitle">36 partidos jugados</p>
+</div>
+
+
+    <div class="match-card">
+        <div class="match-date">2026-01-26</div>
+        <div class="match-teams">
+            <div class="match-team winner">
+                <div class="match-team-logo">G2</div>
+                <span class="match-team-name">G2</span>
+            </div>
+            <div class="match-score">
+                <span class="text-blue">17</span>
+                <span class="text-muted">-</span>
+                <span class="text-pink">6</span>
+            </div>
+            <div class="match-team loser">
+                <span class="match-team-name">TH</span>
+                <div class="match-team-logo">TH</div>
+            </div>
+        </div>
+        <div class="match-duration">29:06</div>
+    </div>
+
+    <div class="match-card">
+        <div class="match-date">2026-01-26</div>
+        <div class="match-teams">
+            <div class="match-team loser">
+                <div class="match-team-logo">VIT</div>
+                <span class="match-team-name">VIT</span>
+            </div>
+            <div class="match-score">
+                <span class="text-blue">2</span>
+                <span class="text-muted">-</span>
+                <span class="text-pink">20</span>
+            </div>
+            <div class="match-team winner">
+                <span class="match-team-name">FNC</span>
+                <div class="match-team-logo">FNC</div>
+            </div>
+        </div>
+        <div class="match-duration">29:42</div>
+    </div>
+
+    <div class="match-card">
+        <div class="match-date">2026-01-25</div>
+        <div class="match-teams">
+            <div class="match-team loser">
+                <div class="match-team-logo">G2</div>
+                <span class="match-team-name">G2</span>
+            </div>
+            <div class="match-score">
+                <span class="text-blue">4</span>
+                <span class="text-muted">-</span>
+                <span class="text-pink">19</span>
+            </div>
+            <div class="match-team winner">
+                <span class="match-team-name">KC</span>
+                <div class="match-team-logo">KC</div>
+            </div>
+        </div>
+        <div class="match-duration">33:43</div>
+    </div>
+
+    <div class="match-card">
+        <div class="match-date">2026-01-25</div>
+        <div class="match-teams">
+            <div class="match-team winner">
+                <div class="match-team-logo">SK</div>
+                <span class="match-team-name">SK</span>
+            </div>
+            <div class="match-score">
+                <span class="text-blue">26</span>
+                <span class="text-muted">-</span>
+                <span class="text-pink">7</span>
+            </div>
+            <div class="match-team loser">
+                <span class="match-team-name">KCB</span>
+                <div class="match-team-logo">KCB</div>
+            </div>
+        </div>
+        <div class="match-duration">25:17</div>
+    </div>
+
+    <div class="match-card">
+        <div class="match-date">2026-01-24</div>
+        <div class="match-teams">
+            <div class="match-team loser">
+                <div class="match-team-logo">FNC</div>
+                <span class="match-team-name">FNC</span>
+            </div>
+            <div class="match-score">
+                <span class="text-blue">11</span>
+                <span class="text-muted">-</span>
+                <span class="text-pink">22</span>
+            </div>
+            <div class="match-team winner">
+                <span class="match-team-name">MKOI</span>
+                <div class="match-team-logo">MKOI</div>
+            </div>
+        </div>
+        <div class="match-duration">32:05</div>
+    </div>
+
+    <div class="match-card">
+        <div class="match-date">2026-01-24</div>
+        <div class="match-teams">
+            <div class="match-team winner">
+                <div class="match-team-logo">TH</div>
+                <span class="match-team-name">TH</span>
+            </div>
+            <div class="match-score">
+                <span class="text-blue">13</span>
+                <span class="text-muted">-</span>
+                <span class="text-pink">8</span>
+            </div>
+            <div class="match-team loser">
+                <span class="match-team-name">VIT</span>
+                <div class="match-team-logo">VIT</div>
+            </div>
+        </div>
+        <div class="match-duration">32:27</div>
+    </div>
+
+    <div class="match-card">
+        <div class="match-date">2026-01-23</div>
+        <div class="match-teams">
+            <div class="match-team winner">
+                <div class="match-team-logo">GX</div>
+                <span class="match-team-name">GX</span>
+            </div>
+            <div class="match-score">
+                <span class="text-blue">14</span>
+                <span class="text-muted">-</span>
+                <span class="text-pink">5</span>
+            </div>
+            <div class="match-team loser">
+                <span class="match-team-name">LR</span>
+                <div class="match-team-logo">LR</div>
+            </div>
+        </div>
+        <div class="match-duration">24:31</div>
+    </div>
+
+    <div class="match-card">
+        <div class="match-date">2026-01-23</div>
+        <div class="match-teams">
+            <div class="match-team loser">
+                <div class="match-team-logo">SK</div>
+                <span class="match-team-name">SK</span>
+            </div>
+            <div class="match-score">
+                <span class="text-blue">6</span>
+                <span class="text-muted">-</span>
+                <span class="text-pink">18</span>
+            </div>
+            <div class="match-team winner">
+                <span class="match-team-name">NAVI</span>
+                <div class="match-team-logo">NAVI</div>
+            </div>
+        </div>
+        <div class="match-duration">30:43</div>
+    </div>
+
+    <div class="match-card">
+        <div class="match-date">2026-01-22</div>
+        <div class="match-teams">
+            <div class="match-team winner">
+                <div class="match-team-logo">VIT</div>
+                <span class="match-team-name">VIT </span>
+            </div>
+            <div class="match-score">
+                <span class="text-blue">19</span>
+                <span class="text-muted">-</span>
+                <span class="text-pink">12</span>
+            </div>
+            <div class="match-team loser">
+                <span class="match-team-name">SHFT</span>
+                <div class="match-team-logo">SHFT</div>
+            </div>
+        </div>
+        <div class="match-duration">32:57</div>
+    </div>
+
+    <div class="match-card">
+        <div class="match-date">2026-01-22</div>
+        <div class="match-teams">
+            <div class="match-team loser">
+                <div class="match-team-logo">KC</div>
+                <span class="match-team-name">KC</span>
+            </div>
+            <div class="match-score">
+                <span class="text-blue">8</span>
+                <span class="text-muted">-</span>
+                <span class="text-pink">16</span>
+            </div>
+            <div class="match-team winner">
+                <span class="match-team-name">MKOI</span>
+                <div class="match-team-logo">MKOI</div>
+            </div>
+        </div>
+        <div class="match-duration">32:14</div>
+    </div>
+
+</div>
+
