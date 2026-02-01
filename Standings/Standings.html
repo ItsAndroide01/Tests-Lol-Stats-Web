@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LEC Standings</title>
+    <link rel="stylesheet" href="Standings.css">
+</head>
+<body>
+
+<div id="app">
+
+    <!-- ================= HEADER ================= -->
+
+<header class="header-container">
+    <div class="header-left">
+        <div class="league-brand" data-page="overview">
+            <div class="league-logo">LEC</div>
+            <span class="league-name">LEC</span>
+            <span class="league-badge">2026</span>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <button class="nav-link" data-page="overview">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <span>Overview</span>
+            </button>
+
+            <button class="nav-link active" data-page="matches">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                </svg>
+                <span>Partidos</span>
+            </button>
+
+            <button class="nav-link" data-page="standings">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 20V10"></path>
+                    <path d="M12 20V4"></path>
+                    <path d="M6 20v-6"></path>
+                </svg>
+                <span>Standings</span>
+            </button>
+
+            <button class="nav-link" data-page="teams">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>Equipos</span>
+            </button>
+
+            <button class="nav-link" data-page="players">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>Jugadores</span>
+            </button>
+
+            <button class="nav-link" data-page="champions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span>Campeones</span>
+            </button>
+
+            <button class="nav-link" data-page="compare">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="18" cy="18" r="3"></circle>
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                    <path d="M11 18H8a2 2 0 0 1-2-2V9"></path>
+                </svg>
+                <span>Comparar</span>
+            </button>
+        </nav>
+    </div>
+
+    <div class="header-right">
+        <select class="year-selector">
+            <option>Winter 2026</option>
+        </select>
+    </div>
+</header>
+

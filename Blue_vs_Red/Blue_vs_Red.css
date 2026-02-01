@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    background:
+        radial-gradient(1200px 600px at top, #15151a, #0b0b0e);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* ================= CARD ================= */
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.09),
+            rgba(255,255,255,0.015)
+        );
+    backdrop-filter: blur(50px) saturate(150%);
+    -webkit-backdrop-filter: blur(50px) saturate(150%);
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.10),
+        inset 0 -1px 0 rgba(255,255,255,0.02);
+    overflow: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.card-header {
+    padding: 24px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.015)
+        );
+}
+
+/* ================= GOLD ICON (FINAL) ================= */
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 14px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,215,140,0.55),
+            rgba(255,175,70,0.25)
+        );
+
+    box-shadow:
+        0 10px 28px rgba(255,190,90,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.6),
+        inset 0 0 0 1px rgba(255,215,140,0.45);
+
+    overflow: hidden;
+}
+
+/* glow suave */
+.card-icon::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 18px;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255,210,120,0.35),
+            transparent 65%
+        );
+    pointer-events: none;
+}
+
+.card-icon svg {
+    width: 22px;
+    height: 22px;
+    color: #1a1a1a;
+    z-index: 1;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+}
+
+
+.card-icon svg {
+    width: 22px;
+    height: 22px;
+    color: #1a1a1a;
+    z-index: 1;
+}
+
+/* ================= TITLES ================= */
+
+.card-title {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px;
+}
+
+/* ================= BODY ================= */
+
+.card-body {
+    padding: 20px 20px 22px;
+}
+
+/* ================= ROW ================= */
+
+.side-stat-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 0;
+}
+
+/* ================= LABEL ================= */
+
+.side-stat-label {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(255,255,255,0.85);
+}
+
+/* ================= BAR CONTAINER ================= */
+
+.side-stat-bar-container {
+    display: grid;
+    grid-template-columns: 56px 1fr 56px;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ================= VALUES ================= */
+
+.side-stat-value {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.side-stat-value.blue {
+    color: #5AAEFF;
+    text-align: left;
+    text-shadow: 0 0 6px rgba(90,174,255,0.35);
+}
+
+.side-stat-value.red {
+    color: #FF7A6B;
+    text-align: right;
+    text-shadow: 0 0 6px rgba(255,122,107,0.35);
+}
+
+/* ================= BAR ================= */
+
+.side-stat-bar {
+    position: relative;
+    height: 11px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.16);
+    box-shadow:
+        inset 0 1px 3px rgba(0,0,0,0.55),
+        inset 0 0 0 1px rgba(255,255,255,0.12);
+}
+
+
+/* ================= BLUE ================= */
+
+.side-stat-bar-blue {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background:
+        linear-gradient(
+            90deg,
+            #1E6BFF,
+            #5AAEFF
+        );
+    box-shadow:
+        0 0 12px rgba(90,174,255,0.45);
+}
+
+/* ================= RED ================= */
+
+.side-stat-bar-red {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background:
+        linear-gradient(
+            90deg,
+            #FF4D4D,
+            #FF7A6B
+        );
+    box-shadow:
+        0 0 12px rgba(255,122,107,0.45);
+}
